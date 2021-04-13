@@ -1,0 +1,66 @@
+vscode内部集成emmet语法，emmet生成的代码按tab键光标会从白色块跳向下个白色块
+
+一、html的emmet缩写
+1.生成html模板
+!/html:5生成
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+    </body>
+
+    </html>
+
+    2.标签名
+    生成标签
+    例：div+tab生成
+    <div></div>
+
+    二、html的emmet语法
+    1.生成n个相同标签
+    标签名*n ——n为数字
+    例：div*2+tab生成
+    <div></div>
+    <div></div>
+
+    2.向下一层添加创建元素
+    >标签名
+    例：div>img+tab生成
+    <div>
+        <img src="" alt="">
+    </div>
+
+    3.同一层添加创建元素
+    +标签名
+    例:div+img+tab生成 <div>
+    </div>
+    <img src="" alt="">
+
+    4.生成带类名/id名的标签
+    标签名.类名/标签名#id名
+    例：div.app+tab生成
+    <div class="app"></div>
+
+    例：
+    div#app+tab生成
+    <div id="app"></div>
+
+    5.带类名的标签类名有顺序
+    标签名.类名$[@n]*m 从1/[n开始（包括n）]向后正序m个
+    例：li.item$@3*3+tab生成
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+
+    6.生成标签里带内容的标签
+    标签名{内容}
+    例：div{男人}+tab生成
+    <div>男人</div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-表单标签</title>
+</head>
+<body>
+    <form>
+    <!-- form标签定义表单域 -->
+        <label>用户名：<input type="text" name="username" value="请输入用户名" maxlength="6" ></label><br>
+        <!-- text 单行文本框 用户可以输入任何文字 -->
+        <!-- label标签为input元素定义标记，label标签内点击文本，浏览器把焦点（当前光标被激活的位置）转到label标签里的表单控件上 -->
+        <!-- name属性定义input元素的名称,name 属性用于对提交到服务器后的表单数据进行标识，或者在客户端通过JavaScript引用表单数据。 -->
+        密码：<input type="password" name="pwd"><br>
+        <!-- password 密码框 用户看不见输入数据 -->
+        性别：男 <input type="radio" name="sex" checked> 女 <input type="radio" name="sex" ><br>
+        <!-- radio 单选按钮 实现多选一 -->
+        爱好：吃饭<input type="checkbox" name="hobby" checked="checked"> 睡觉 <input type="checkbox" name="hobby" checked="checked"> 打豆豆 <input type="checkbox" name="hobby"><br>
+        <!-- checkbox 复选框 实现多选一或多 -->
+        <!-- name值相同的单选按钮多选一/复选框多选一或多 -->
+        <!-- 单选按钮和复选框可设置checked属性（默认属性值checked）页面打开默认选中这个按钮 -->
+        
+        <input type="submit" value="免费注册"><br>
+        <!--定义提交按钮，把表单域form里的表单元素里的值提交给后台服务器 -->
+        <input type="reset" value="重新填写"><br>
+        <!-- 定义重置按钮，还原表单元素初始的默认状态 -->
+         <!-- type="button", "reset", "submit" - 定义按钮上的显示文本
+            type="text", "password", "hidden" - 定义输入字段的初始值
+            type="checkbox", "radio", "image" - 定义与输入后端的值 -->
+        <!-- maxlength属性值为整数，定义输入字段的最大长度 -->
+        
+        籍贯：
+        <select>
+        <option>山东</option>
+        <option selected>北京</option>
+        <option>天津</option>
+        </select><br>
+        <!-- select标签定义下拉列表， -->
+        <!-- option标签定义下拉列表中的一个选项，在option标签设置selected属性（默认属性值selected）,当前项为默认项 --> 
+        
+        今日反馈：
+        <textarea>pink老师</textarea>
+        <!-- textarea标签定义多行文本输入框 -->
+    </form>
+</body>
+</html>
