@@ -10,13 +10,12 @@
        
     <!-- form标签定义表单域 
      action 处理表单提交的 URL
-    method 浏览器提交表单使用HTTP请求方式. 可能的值有：
-    post：HTTP POST方法；表单数据会包含在表单体内然后发送给服务器.
-    get： HTTP GET方法；表单数据不发送给服务器，仅向服务端请求资源。-->
+    method 浏览器提交表单使用HTTP请求方式. 可选：
+    post：HTTP POST方法；依据表单数据可以更新服务器资源，提交表单时以input元素1的name属性值=input元素1的输入值&input元素2的name属性值=input元素2的输入值...的形式添加到请求实体请求资源
+    get： HTTP GET方法；表单数据不能发送给服务器，仅向服务端请求资源，提交表单时以input元素1的name属性值=input元素1的输入值&input元素2的name属性值=input元素2的输入值的形式添加到url查询字符串中，。-->
         <label>用户名：<input type="text" name="username" value="请输入用户名" maxlength="6" ></label><br>
         <!-- text 单行文本框 用户可以输入任何文字 -->
         <!-- label标签为input元素定义标记，label标签内点击文本，浏览器把焦点（当前光标被激活的位置）转到label标签里的表单控件上 -->
-        <!-- name属性定义input元素的名称，提交表单时以name=input元素的value的形式添加到请求参数中。 -->
         密码：<input type="password" name="pwd"><br>
         <!-- password 密码框 用户看不见输入数据 -->
         性别：男 <input type="radio" name="sex" checked> 女 <input type="radio" name="sex" ><br>
